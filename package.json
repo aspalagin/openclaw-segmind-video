@@ -1,0 +1,29 @@
+{
+  "name": "openclaw-segmind-video",
+  "version": "0.1.0",
+  "description": "Segmind Seedance video provider for OpenClaw",
+  "type": "module",
+  "main": "./index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aspalagin/openclaw-segmind-video.git"
+  },
+  "keywords": [
+    "openclaw",
+    "segmind",
+    "seedance",
+    "video-generation"
+  ],
+  "scripts": {
+    "check": "node --check index.js"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ]
+  },
+  "peerDependencies": {
+    "openclaw": "*"
+  }
+}

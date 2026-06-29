@@ -1,0 +1,69 @@
+{
+  "id": "segmind",
+  "name": "Segmind Video",
+  "description": "Segmind Seedance 2.0 video generation provider",
+  "version": "0.1.0",
+  "activation": {
+    "onStartup": false
+  },
+  "providers": [
+    "segmind"
+  ],
+  "setup": {
+    "providers": [
+      {
+        "id": "segmind",
+        "envVars": [
+          "SEGMIND_API_KEY"
+        ]
+      }
+    ]
+  },
+  "providerAuthChoices": [
+    {
+      "provider": "segmind",
+      "method": "api-key",
+      "choiceId": "segmind-api-key",
+      "choiceLabel": "Segmind API key",
+      "groupId": "segmind",
+      "groupLabel": "Segmind",
+      "groupHint": "Video generation",
+      "onboardingScopes": [
+        "image-generation"
+      ],
+      "optionKey": "segmindApiKey",
+      "cliFlag": "--segmind-api-key",
+      "cliOption": "--segmind-api-key <key>",
+      "cliDescription": "Segmind API key"
+    }
+  ],
+  "contracts": {
+    "videoGenerationProviders": [
+      "segmind"
+    ]
+  },
+  "videoGenerationProviderMetadata": {
+    "segmind": {
+      "referenceAudioInputs": true
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "apiKey": {
+        "type": [
+          "string",
+          "object",
+          "null"
+        ]
+      },
+      "baseUrl": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}
