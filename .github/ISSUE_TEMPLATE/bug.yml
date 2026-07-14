@@ -1,0 +1,24 @@
+name: Bug report
+description: Report a reproducible problem
+title: "Bug: "
+labels: [bug]
+body:
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Remove API keys, tokens, and private media URLs.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Plugin and OpenClaw versions
+    validations:
+      required: true

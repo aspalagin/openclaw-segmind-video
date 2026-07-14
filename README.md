@@ -36,6 +36,10 @@ npm run check
 Copy or install the plugin into your OpenClaw extensions directory, then enable
 it in `openclaw.json`.
 
+The plugin is tested with Node.js 20+ and OpenClaw installations that expose
+the `videoGenerationProviders` plugin contract. It does not make network calls
+until `video_generate` is invoked.
+
 ## Configuration
 
 Example plugin entry:
@@ -106,7 +110,11 @@ Important distinction:
 
 ```bash
 npm run check
+npm test
 ```
+
+The test suite uses mocked OpenClaw SDK and Segmind HTTP responses; it neither
+requires API keys nor contacts external services.
 
 ## License
 
