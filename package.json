@@ -21,7 +21,8 @@
   ],
   "scripts": {
     "check": "node --check index.js",
-    "test": "node --experimental-loader ./tests/mock-openclaw-loader.mjs --test ./tests/provider.test.mjs"
+    "test": "node --experimental-loader ./tests/mock-openclaw-loader.mjs --test ./tests/provider.test.mjs",
+    "test:sdk": "node --test ./tests/sdk.test.mjs"
   },
   "engines": {
     "node": ">=20"
