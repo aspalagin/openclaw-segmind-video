@@ -38,7 +38,8 @@ it in `openclaw.json`.
 
 The plugin is tested with Node.js 20+ and OpenClaw installations that expose
 the `videoGenerationProviders` plugin contract. It does not make network calls
-until `video_generate` is invoked.
+until `video_generate` is invoked. CI checks registration with the real SDK of
+OpenClaw 2026.11.1 and 2026.11.3 without network requests.
 
 ## Configuration
 
